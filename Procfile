@@ -1,1 +1,1 @@
-web: build/scripts/SCPapi
+web: build/install/SCPapi/bin/SCPapi
