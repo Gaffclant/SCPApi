@@ -4,11 +4,11 @@ plugins {
     kotlin("jvm") version "1.5.30"
     kotlin("plugin.serialization") version "1.5.30"
     application
-    base
 }
 
 group = "me.codyq"
 version = "1.0-SNAPSHOT"
+
 
 repositories {
     mavenCentral()
@@ -26,6 +26,7 @@ dependencies {
     implementation("io.lettuce:lettuce-core:6.1.4.RELEASE")
     implementation("io.insert-koin:koin-ktor:3.1.2")
     implementation("io.insert-koin:koin-logger-slf4j:3.1.2")
+
 }
 
 tasks.test {
@@ -39,3 +40,4 @@ tasks.withType<KotlinCompile>() {
 application {
     mainClass.set("io.ktor.server.netty.EngineMain")
 }
+
