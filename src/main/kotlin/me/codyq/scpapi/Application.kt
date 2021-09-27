@@ -106,7 +106,7 @@ fun Application.main(){
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.24.2/swagger-ui-standalone-preset.js"> </script>
                 <script>
                 window.onload = function() {
-                  var spec = {"openapi": "3.0.1", "info": {"title": "SCPapi", "description": "This api is made to return data on SCP's in the SCP foundation.", "contact": {"email": "gaffclant@gmail.com"}, "version": "1.0.0"}, "servers": [{"url": "https://scpapi.com/"}, {"url": "http://scpapi.com/"}], "tags": [{"name": "scp", "description": "Get info on any SCP on the wiki"}], "paths": {"/scp/{scpNum}": {"get": {"tags": ["scp"], "summary": "Find SCP-SCPNUM", "description": "Returns information on an SCP", "operationId": "getScp", "parameters": [{"name": "scpNum", "in": "path", "description": "Number of the SCP you want to return", "required": true, "schema": {"type": "string"}}], "responses": {"200": {"description": "successful operation", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/SCP"}}}}, "400": {"description": "Invalid ID supplied", "content": {}}, "404": {"description": "SCP not found", "content": {}}}}}}, "components": {"schemas": {"SCP": {"type": "object", "properties": {"scpRating": {"type": "integer", "format": "int64"}, "scpId": {"type": "string"}, "scpClass": {"type": "string"}, "scpContainmentProcedures": {"type": "string"}, "scpDescription": {"type": "string"}, "scpBody": {"type": "string"}, "scpLogs": {"type": "array", "items": {"type": "string"}}, "scpImages": {"type": "array", "items": {"type": "object", "properties": {"url": {"type": "string"}, "caption": {"type": "string"}}}}}}}}};
+                  var spec = {"openapi": "3.0.1", "info": {"title": "SCPapi", "description": "This api is made to return data on SCP's in the SCP foundation.", "contact": {"email": "gaffclant@gmail.com"}, "version": "1.0.0"}, "servers": [{"url": "https://scpapi.com/"}, {"url": "http://scpapi.com/"}], "tags": [{"name": "scp", "description": "Get info on any SCP on the wiki"}], "paths": {"/scp/{scpNum}": {"get": {"tags": ["scp"], "summary": "Find SCP-SCPNUM", "description": "Returns information on an SCP", "operationId": "getScp", "parameters": [{"name": "scpNum", "in": "path", "description": "Number of the SCP you want to return", "required": true, "schema": {"type": "string"}}], "responses": {"200": {"description": "successful operation", "content": {"application/json": {"schema": {"\${"$"}ref": "#/components/schemas/SCP"}}}}, "400": {"description": "Invalid ID supplied", "content": {}}, "404": {"description": "SCP not found", "content": {}}}}}}, "components": {"schemas": {"SCP": {"type": "object", "properties": {"scpRating": {"type": "integer", "format": "int64"}, "scpId": {"type": "string"}, "scpClass": {"type": "string"}, "scpContainmentProcedures": {"type": "string"}, "scpDescription": {"type": "string"}, "scpBody": {"type": "string"}, "scpLogs": {"type": "array", "items": {"type": "string"}}, "scpImages": {"type": "array", "items": {"type": "object", "properties": {"url": {"type": "string"}, "caption": {"type": "string"}}}}}}}}};
                   // Build a system
                   const ui = SwaggerUIBundle({
                     spec: spec,
@@ -126,7 +126,7 @@ fun Application.main(){
                 </script>
                 </body>
                 </html>
-"""
+                """
 
             )
         }
