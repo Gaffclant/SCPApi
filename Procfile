@@ -1,1 +1,1 @@
-worker: ./gradlew run
+web: build/install/kotlinserver/bin/kotlinserver
