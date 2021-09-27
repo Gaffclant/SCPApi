@@ -138,5 +138,5 @@ fun Application.main(){
 val scpAppModule = module {
     single<ScpService> { ScpServiceImpl(get()) }
     single { ScpRepository() }
-    single<DbService> { DbServiceImpl("redis://127.0.0.1:6379") }
+    single<DbService> { DbServiceImpl("redis://thescpapi.herokuapp.com:6379") }
 }
